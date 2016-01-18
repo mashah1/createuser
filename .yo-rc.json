@@ -1,0 +1,26 @@
+{
+  "generator-jhipster": {
+    "baseName": "traqtion",
+    "packageName": "org.nsf.traqtion",
+    "packageFolder": "org/nsf/traqtion",
+    "authenticationType": "oauth2",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "elasticsearch",
+    "useSass": true,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "enableTranslation": true,
+    "enableSocialSignIn": false,
+    "rememberMeKey": "fc554d70ca67030f90ce8339e60faa4a28da0db9",
+    "testFrameworks": [
+      "gatling",
+      "cucumber",
+      "protractor"
+    ]
+  }
+}
