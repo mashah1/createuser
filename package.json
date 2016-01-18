@@ -67,7 +67,6 @@
     "node": "^0.12 || ^4.2"
   },
   "scripts": {
-    "test": "grunt test",
     "postinstall": "webdriver-manager update"
   }
 }
