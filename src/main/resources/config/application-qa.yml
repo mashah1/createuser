@@ -1,5 +1,5 @@
 # ===================================================================
-# Spring Boot configuration for the "dev" profile.
+# Spring Boot configuration for the "prod" profile.
 #
 # This configuration overrides the application.yml file.
 # ===================================================================
@@ -12,53 +12,56 @@
 
 spring:
     profiles:
-        active: dev
+        active: qa
     devtools:
         restart:
-            enabled: true
+            enabled: false
         livereload:
-            enabled: false # we use Grunt + BrowserSync for livereload
+            enabled: false
     datasource:
         driver-class-name: com.mysql.jdbc.jdbc2.optional.MysqlDataSource
-        url: jdbc:mysql://localhost:3306/traqtion?useUnicode=true&characterEncoding=utf8
+        url: jdbc:mysql://traqtion.cdbxsnt2penv.us-east-1.rds.amazonaws.com:3306/traqtion?useUnicode=true&characterEncoding=utf8
         name:
-        username: devuser
-        password: devuser
+        username: qauser
+        password: qauser
     jpa:
         database-platform: org.hibernate.dialect.MySQLInnoDBDialect
         database: MYSQL
-        show_sql: true
+        show_sql: false
         properties:
             hibernate.cache.use_second_level_cache: true
             hibernate.cache.use_query_cache: false
-            hibernate.generate_statistics: true
+            hibernate.generate_statistics: false
             hibernate.cache.region.factory_class: org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
     data:
         elasticsearch:
             cluster-name:
-            cluster-nodes:
-            properties:
-                path:
-                  logs: target/elasticsearch/log
-                  data: target/elasticsearch/data
+            cluster-nodes: localhost:9300
     mail:
         host: localhost
-    messages:
-        cache-seconds: 1
+        port: 25
+        username:
+        password:
     thymeleaf:
-        cache: false
+        cache: true
 
 liquibase:
-    contexts: dev
+    contexts: prod
 
 server:
     port: 8080
+    compression:
+        enabled: true
+        mime-types: text/html,text/xml,text/plain,text/css, application/javascript, application/json
 
 # ===================================================================
 # JHipster specific properties
 # ===================================================================
 
 jhipster:
+    http:
+        cache: # Used by the CachingHttpHeadersFilter
+            timeToLiveInDays: 31
     datasource: # JHipster-specific configuration, in addition to the standard spring.datasource properties
         cachePrepStmts: true
         prepStmtCacheSize: 250
@@ -67,7 +70,7 @@ jhipster:
     cache: # Hibernate 2nd level cache, used by CacheConfiguration
         timeToLiveSeconds: 3600
         ehcache:
-            maxBytesLocalHeap: 16M
+            maxBytesLocalHeap: 256M
     mail: # specific JHipster mail property, for standard properties see MailProperties
         from: traqtion@localhost
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
