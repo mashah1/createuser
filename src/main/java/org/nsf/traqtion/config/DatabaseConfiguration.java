@@ -64,6 +64,7 @@ public class DatabaseConfiguration {
         			String jdbcUrl = "jdbc:mysql://" + hostname + ":" + port + "/" + dbName + "?user=" + userName;
         			log.info("RDS database YES (password redacted): " + jdbcUrl);
         			jdbcUrl +=  "&password=" + password;
+        			dataSourceProperties.setUrl(jdbcUrl);
         			System.setProperty("spring.datasource.url", jdbcUrl);
         		} else {
                     throw new ApplicationContextException("Using aws profile but aws rds system environment not set - are you on aws?");
