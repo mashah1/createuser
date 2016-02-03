@@ -71,7 +71,6 @@ public class Application {
         SpringApplication app = new SpringApplication(Application.class);
         SimpleCommandLinePropertySource source = new SimpleCommandLinePropertySource(args);
         addDefaultProfile(app, source);
-        setDatabaseUrl(app);
         Environment env = app.run(args).getEnvironment();
         log.info("Access URLs:\n----------------------------------------------------------\n\t" +
                 "Local: \t\thttp://127.0.0.1:{}\n\t" +
@@ -82,26 +81,7 @@ public class Application {
 
     }
 
-    /**
-     * If RDS environment variables are set, use them. Otherwise, rely on the profile.
-     */
-    private static void setDatabaseUrl(SpringApplication app) {
-		String hostname = System.getenv("RDS_HOSTNAME");
-		if (hostname != null) {
-			String userName = System.getenv("RDS_USERNAME");
-			String password = System.getenv("RDS_PASSWORD");
-			String dbName = System.getenv("RDS_DB_NAME");
-			String port = System.getenv("RDS_PORT");
-			String jdbcUrl = "jdbc:mysql://" + hostname + ":" + port + "/" + dbName + "?user=" + userName;
-			log.info("RDS database YES (password redacted): " + jdbcUrl);
-			jdbcUrl +=  "&password=" + password;
-			System.setProperty("spring.datasource.url", jdbcUrl);
-		} else {
-			log.info("RDS database NO");
-		}
-    }
-    
-    
+ 
     /**
      * If no profile has been configured, set by default the "dev" profile.
      */

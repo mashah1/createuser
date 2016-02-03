@@ -10,6 +10,7 @@ import liquibase.integration.spring.SpringLiquibase;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import org.springframework.boot.autoconfigure.liquibase.LiquibaseProperties;
@@ -52,6 +53,21 @@ public class DatabaseConfiguration {
                 Arrays.toString(env.getActiveProfiles()));
 
             throw new ApplicationContextException("Database connection pool is not configured correctly");
+        }
+        if (dataSourceProperties.getUrl().equals("USE_AWS_RDS_ENVIRONMENT")) {
+        		String hostname = System.getenv("RDS_HOSTNAME");
+        		if (hostname != null) {
+        			String userName = System.getenv("RDS_USERNAME");
+        			String password = System.getenv("RDS_PASSWORD");
+        			String dbName = System.getenv("RDS_DB_NAME");
+        			String port = System.getenv("RDS_PORT");
+        			String jdbcUrl = "jdbc:mysql://" + hostname + ":" + port + "/" + dbName + "?user=" + userName;
+        			log.info("RDS database YES (password redacted): " + jdbcUrl);
+        			jdbcUrl +=  "&password=" + password;
+        			System.setProperty("spring.datasource.url", jdbcUrl);
+        		} else {
+                    throw new ApplicationContextException("Using aws profile but aws rds system environment not set - are you on aws?");
+        		}
         }
         HikariConfig config = new HikariConfig();
         config.setDataSourceClassName(dataSourceProperties.getDriverClassName());

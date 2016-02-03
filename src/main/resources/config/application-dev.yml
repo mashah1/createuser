@@ -1,5 +1,5 @@
 # ===================================================================
-# Spring Boot configuration for the "dev" profile.
+# Spring Boot configuration for the "cloud" profile.
 #
 # This configuration overrides the application.yml file.
 # ===================================================================
