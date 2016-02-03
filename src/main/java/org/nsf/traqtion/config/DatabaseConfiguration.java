@@ -55,18 +55,19 @@ public class DatabaseConfiguration {
             throw new ApplicationContextException("Database connection pool is not configured correctly");
         }
         if (dataSourceProperties.getUrl().equals("USE_AWS_RDS_ENVIRONMENT")) {
-        		String hostname = System.getenv("RDS_HOSTNAME");
+        		String hostname = System.getProperty("RDS_HOSTNAME");
         		if (hostname != null) {
-        			String userName = System.getenv("RDS_USERNAME");
-        			String password = System.getenv("RDS_PASSWORD");
-        			String dbName = System.getenv("RDS_DB_NAME");
-        			String port = System.getenv("RDS_PORT");
+        			String userName = System.getProperty("RDS_USERNAME");
+        			String password = System.getProperty("RDS_PASSWORD");
+        			String dbName = System.getProperty("RDS_DB_NAME");
+        			String port = System.getProperty("RDS_PORT");
         			String jdbcUrl = "jdbc:mysql://" + hostname + ":" + port + "/" + dbName + "?user=" + userName;
         			log.info("RDS database YES (password redacted): " + jdbcUrl);
         			jdbcUrl +=  "&password=" + password;
         			dataSourceProperties.setUrl(jdbcUrl);
         			System.setProperty("spring.datasource.url", jdbcUrl);
         		} else {
+        			log.error("Using aws profile but aws rds system environment not set - are you on aws?");
                     throw new ApplicationContextException("Using aws profile but aws rds system environment not set - are you on aws?");
         		}
         }
