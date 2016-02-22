@@ -1,0 +1,35 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "relatedto",
+      "otherEntityName": "business",
+      "relationshipType": "one-to-one",
+      "otherEntityField": "id",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "businessRelationship"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "businessRelationshipType",
+      "otherEntityName": "businessRelationshipType",
+      "relationshipType": "one-to-one",
+      "otherEntityField": "id",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "businessRelationship"
+    },
+    {
+      "relationshipId": 3,
+      "relationshipName": "related",
+      "otherEntityName": "business",
+      "relationshipType": "one-to-one",
+      "otherEntityField": "id",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "businessRelationship"
+    }
+  ],
+  "fields": [],
+  "changelogDate": "20160222181430",
+  "dto": "no",
+  "pagination": "no"
+}

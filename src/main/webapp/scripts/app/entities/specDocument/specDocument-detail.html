@@ -1,0 +1,62 @@
+
+<div>
+    <h2><span translate="traqtionApp.specDocument.detail.title">SpecDocument</span> {{specDocument.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="traqtionApp.specDocument.name">Name</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{specDocument.name}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="traqtionApp.specDocument.description">Description</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{specDocument.description}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="traqtionApp.specDocument.path">Path</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{specDocument.path}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="traqtionApp.specDocument.type">Type</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{specDocument.type}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="traqtionApp.specDocument.attribute1">Attribute1</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{specDocument.attribute1}}</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

@@ -1,0 +1,21 @@
+{
+    "traqtionApp": {
+        "rolePermission" : {
+            "home": {
+                "title": "RolePermissions",
+                "createLabel": "Créer un nouveau RolePermission",
+                "createOrEditLabel": "Créer ou éditer un RolePermission"
+            },
+            "created": "Un nouveau RolePermission a été créé avec l'identifiant {{ param }}",
+            "updated": "Le RolePermission avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le RolePermission avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le RolePermission {{ id }} ?"
+            },
+            "detail": {
+                "title": "RolePermission"
+            }
+        }
+    }
+}
+

@@ -1,0 +1,22 @@
+{
+    "traqtionApp": {
+        "productType" : {
+            "home": {
+                "title": "ProductTypes",
+                "createLabel": "Create a new ProductType",
+                "createOrEditLabel": "Create or edit a ProductType"
+            },
+            "created": "A new ProductType is created with identifier {{ param }}",
+            "updated": "A ProductType is updated with identifier {{ param }}",
+            "deleted": "A ProductType is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete ProductType {{ id }}?"
+            },
+            "detail": {
+                "title": "ProductType"
+            },
+            "name": "Name",
+            "description": "Description"
+        }
+    }
+}

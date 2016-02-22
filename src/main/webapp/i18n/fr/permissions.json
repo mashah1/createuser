@@ -1,0 +1,23 @@
+{
+    "traqtionApp": {
+        "permissions" : {
+            "home": {
+                "title": "Permissionss",
+                "createLabel": "Créer un nouveau Permissions",
+                "createOrEditLabel": "Créer ou éditer un Permissions"
+            },
+            "created": "Un nouveau Permissions a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Permissions avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Permissions avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Permissions {{ id }} ?"
+            },
+            "detail": {
+                "title": "Permissions"
+            },
+            "attribute": "Attribute",
+            "rolePermission": "RolePermission"
+        }
+    }
+}
+

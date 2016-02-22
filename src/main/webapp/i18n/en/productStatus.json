@@ -1,0 +1,21 @@
+{
+    "traqtionApp": {
+        "productStatus" : {
+            "home": {
+                "title": "ProductStatuss",
+                "createLabel": "Create a new ProductStatus",
+                "createOrEditLabel": "Create or edit a ProductStatus"
+            },
+            "created": "A new ProductStatus is created with identifier {{ param }}",
+            "updated": "A ProductStatus is updated with identifier {{ param }}",
+            "deleted": "A ProductStatus is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete ProductStatus {{ id }}?"
+            },
+            "detail": {
+                "title": "ProductStatus"
+            },
+            "name": "Name"
+        }
+    }
+}

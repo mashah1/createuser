@@ -1,0 +1,25 @@
+{
+    "traqtionApp": {
+        "userBusinessRole" : {
+            "home": {
+                "title": "UserBusinessRoles",
+                "createLabel": "Créer un nouveau UserBusinessRole",
+                "createOrEditLabel": "Créer ou éditer un UserBusinessRole"
+            },
+            "created": "Un nouveau UserBusinessRole a été créé avec l'identifiant {{ param }}",
+            "updated": "Le UserBusinessRole avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le UserBusinessRole avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le UserBusinessRole {{ id }} ?"
+            },
+            "detail": {
+                "title": "UserBusinessRole"
+            },
+            "isActive": "IsActive",
+            "user": "User",
+            "role": "Role",
+            "business": "Business"
+        }
+    }
+}
+

@@ -1,0 +1,28 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "specification",
+      "otherEntityName": "specification",
+      "relationshipType": "one-to-one",
+      "otherEntityField": "id",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "supplierSite"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "attribute",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "attribute1",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160222181430",
+  "dto": "no",
+  "pagination": "no"
+}

@@ -1,0 +1,69 @@
+<div>
+    <h2 translate="traqtionApp.userBusinessRole.home.title">UserBusinessRoles</h2>
+    <jh-alert></jh-alert>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" ui-sref="userBusinessRole.new">
+                    <span class="glyphicon glyphicon-flash"></span> <span translate="traqtionApp.userBusinessRole.home.createLabel">Create a new UserBusinessRole</span>
+                </button>
+            </div>
+            <div class="col-md-8">
+                <form name="searchForm" class="form-inline">
+                    <div class="form-group">
+                        <input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="query">
+                    </div>
+                    <button class="btn btn-info" ng-click="search()"><span class="glyphicon glyphicon-search"></span> <span>Search a UserBusinessRole</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="traqtionApp.userBusinessRole.isActive">IsActive</span></th>
+                    <th><span translate="traqtionApp.userBusinessRole.user">user</span></th>
+                    <th><span translate="traqtionApp.userBusinessRole.role">role</span></th>
+                    <th><span translate="traqtionApp.userBusinessRole.business">business</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="userBusinessRole in userBusinessRoles track by userBusinessRole.id">
+                    <td><a ui-sref="userBusinessRole.detail({id:userBusinessRole.id})">{{userBusinessRole.id}}</a></td>
+                    <td>{{userBusinessRole.isActive}}</td>
+                    <td>
+                        {{userBusinessRole.user.id}}
+                    </td>
+                    <td>
+                        <a ui-sref="role.detail({id:userBusinessRole.role.id})">{{userBusinessRole.role.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="business.detail({id:userBusinessRole.business.id})">{{userBusinessRole.business.id}}</a>
+                    </td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="userBusinessRole.detail({id:userBusinessRole.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="userBusinessRole.edit({id:userBusinessRole.id})"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="userBusinessRole.delete({id:userBusinessRole.id})"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

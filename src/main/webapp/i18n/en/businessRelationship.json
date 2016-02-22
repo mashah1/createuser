@@ -1,0 +1,23 @@
+{
+    "traqtionApp": {
+        "businessRelationship" : {
+            "home": {
+                "title": "BusinessRelationships",
+                "createLabel": "Create a new BusinessRelationship",
+                "createOrEditLabel": "Create or edit a BusinessRelationship"
+            },
+            "created": "A new BusinessRelationship is created with identifier {{ param }}",
+            "updated": "A BusinessRelationship is updated with identifier {{ param }}",
+            "deleted": "A BusinessRelationship is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete BusinessRelationship {{ id }}?"
+            },
+            "detail": {
+                "title": "BusinessRelationship"
+            },
+            "relatedto": "Relatedto",
+            "businessRelationshipType": "BusinessRelationshipType",
+            "related": "Related"
+        }
+    }
+}

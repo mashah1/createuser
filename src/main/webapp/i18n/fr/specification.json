@@ -1,0 +1,27 @@
+{
+    "traqtionApp": {
+        "specification" : {
+            "home": {
+                "title": "Specifications",
+                "createLabel": "Créer un nouveau Specification",
+                "createOrEditLabel": "Créer ou éditer un Specification"
+            },
+            "created": "Un nouveau Specification a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Specification avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Specification avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Specification {{ id }} ?"
+            },
+            "detail": {
+                "title": "Specification"
+            },
+            "attribute": "Attribute",
+            "attribute1": "Attribute1",
+            "version": "Version",
+            "primarySpec": "PrimarySpec",
+            "specStatus": "SpecStatus",
+            "document": "Document"
+        }
+    }
+}
+

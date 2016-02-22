@@ -1,0 +1,25 @@
+{
+    "traqtionApp": {
+        "specDocument" : {
+            "home": {
+                "title": "SpecDocuments",
+                "createLabel": "Create a new SpecDocument",
+                "createOrEditLabel": "Create or edit a SpecDocument"
+            },
+            "created": "A new SpecDocument is created with identifier {{ param }}",
+            "updated": "A SpecDocument is updated with identifier {{ param }}",
+            "deleted": "A SpecDocument is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete SpecDocument {{ id }}?"
+            },
+            "detail": {
+                "title": "SpecDocument"
+            },
+            "name": "Name",
+            "description": "Description",
+            "path": "Path",
+            "type": "Type",
+            "attribute1": "Attribute1"
+        }
+    }
+}

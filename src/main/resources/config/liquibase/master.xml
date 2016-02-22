@@ -5,5 +5,28 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
 
     <include file="classpath:config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160222181430_added_entity_ProductStatus.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160222181430_added_entity_PrimarySpec.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160222181430_added_entity_ProductType.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160222181430_added_entity_Brand.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160222181430_added_entity_SpecStatus.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160222181430_added_entity_Business.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160222181430_added_entity_SpecDocument.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160222181430_added_entity_BusinessRelationshipType.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160222181430_added_entity_RolePermission.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160222181430_added_entity_BusinessType.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160222181430_added_entity_Product.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160222181430_added_entity_Specification.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160222181430_added_entity_SupplierSite.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160222181430_added_entity_Client.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160222181430_added_entity_Supplier.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160222181430_added_entity_Role.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160222181430_added_entity_UserBusinessRole.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160222181430_added_entity_ServiceProvider.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160222181430_added_entity_Manufacturer.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160222181430_added_entity_BusinessRelationship.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160222181430_added_entity_Category.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160222181430_added_entity_UserCategory.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160222181430_added_entity_Permissions.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
 </databaseChangeLog>

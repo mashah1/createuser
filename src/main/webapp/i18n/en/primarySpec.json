@@ -1,0 +1,22 @@
+{
+    "traqtionApp": {
+        "primarySpec" : {
+            "home": {
+                "title": "PrimarySpecs",
+                "createLabel": "Create a new PrimarySpec",
+                "createOrEditLabel": "Create or edit a PrimarySpec"
+            },
+            "created": "A new PrimarySpec is created with identifier {{ param }}",
+            "updated": "A PrimarySpec is updated with identifier {{ param }}",
+            "deleted": "A PrimarySpec is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete PrimarySpec {{ id }}?"
+            },
+            "detail": {
+                "title": "PrimarySpec"
+            },
+            "attribute": "Attribute",
+            "attribute1": "Attribute1"
+        }
+    }
+}

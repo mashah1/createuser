@@ -1,0 +1,80 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myProductLabel" translate="traqtionApp.product.home.createOrEditLabel">Create or edit a Product</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="product.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="traqtionApp.product.name" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                    ng-model="product.name"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="traqtionApp.product.secondaryTitle" for="field_secondaryTitle">SecondaryTitle</label>
+            <input type="text" class="form-control" name="secondaryTitle" id="field_secondaryTitle"
+                    ng-model="product.secondaryTitle"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="traqtionApp.product.productIndentifier" for="field_productIndentifier">ProductIndentifier</label>
+            <input type="text" class="form-control" name="productIndentifier" id="field_productIndentifier"
+                    ng-model="product.productIndentifier"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="traqtionApp.product.productCode" for="field_productCode">ProductCode</label>
+            <input type="text" class="form-control" name="productCode" id="field_productCode"
+                    ng-model="product.productCode"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="traqtionApp.product.uPC" for="field_uPC">UPC</label>
+            <input type="text" class="form-control" name="uPC" id="field_uPC"
+                    ng-model="product.uPC"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label translate="traqtionApp.product.productType" for="field_productType">productType</label>
+            <select class="form-control" id="field_productType" name="productType" ng-model="product.productType" ng-options="productType as productType.id for productType in producttypes | orderBy:'id' track by productType.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="traqtionApp.product.brand" for="field_brand">brand</label>
+            <select class="form-control" id="field_brand" name="brand" ng-model="product.brand" ng-options="brand as brand.id for brand in brands track by brand.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="traqtionApp.product.primarySpec" for="field_primarySpec">primarySpec</label>
+            <select class="form-control" id="field_primarySpec" name="primarySpec" ng-model="product.primarySpec" ng-options="primarySpec as primarySpec.id for primarySpec in primaryspecs | orderBy:'id' track by primarySpec.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="traqtionApp.product.productStatus" for="field_productStatus">productStatus</label>
+            <select class="form-control" id="field_productStatus" name="productStatus" ng-model="product.productStatus" ng-options="productStatus as productStatus.id for productStatus in productstatuss | orderBy:'id' track by productStatus.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

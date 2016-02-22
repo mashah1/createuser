@@ -1,0 +1,94 @@
+
+<div>
+    <h2><span translate="traqtionApp.product.detail.title">Product</span> {{product.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="traqtionApp.product.name">Name</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{product.name}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="traqtionApp.product.secondaryTitle">SecondaryTitle</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{product.secondaryTitle}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="traqtionApp.product.productIndentifier">ProductIndentifier</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{product.productIndentifier}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="traqtionApp.product.productCode">ProductCode</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{product.productCode}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="traqtionApp.product.uPC">UPC</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{product.uPC}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="traqtionApp.product.productType">productType</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="productType.detail({id:product.productType.id})">{{product.productType.id}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="traqtionApp.product.brand">brand</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="brand.detail({id:product.brand.id})">{{product.brand.id}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="traqtionApp.product.primarySpec">primarySpec</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="primarySpec.detail({id:product.primarySpec.id})">{{product.primarySpec.id}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="traqtionApp.product.productStatus">productStatus</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="productStatus.detail({id:product.productStatus.id})">{{product.productStatus.id}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

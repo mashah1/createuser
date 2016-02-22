@@ -1,0 +1,68 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "productType",
+      "otherEntityName": "productType",
+      "relationshipType": "one-to-one",
+      "otherEntityField": "id",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "product"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "brand",
+      "otherEntityName": "brand",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 3,
+      "relationshipName": "primarySpec",
+      "otherEntityName": "primarySpec",
+      "relationshipType": "one-to-one",
+      "otherEntityField": "id",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "product"
+    },
+    {
+      "relationshipId": 4,
+      "relationshipName": "productStatus",
+      "otherEntityName": "productStatus",
+      "relationshipType": "one-to-one",
+      "otherEntityField": "id",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "product"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "secondaryTitle",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "productIndentifier",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "productCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "uPC",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160222181430",
+  "dto": "no",
+  "pagination": "no"
+}

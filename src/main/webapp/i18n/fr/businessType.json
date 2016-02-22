@@ -1,0 +1,24 @@
+{
+    "traqtionApp": {
+        "businessType" : {
+            "home": {
+                "title": "BusinessTypes",
+                "createLabel": "Créer un nouveau BusinessType",
+                "createOrEditLabel": "Créer ou éditer un BusinessType"
+            },
+            "created": "Un nouveau BusinessType a été créé avec l'identifiant {{ param }}",
+            "updated": "Le BusinessType avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le BusinessType avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le BusinessType {{ id }} ?"
+            },
+            "detail": {
+                "title": "BusinessType"
+            },
+            "name": "Name",
+            "rolePermission": "RolePermission",
+            "business": "Business"
+        }
+    }
+}
+

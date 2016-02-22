@@ -1,0 +1,22 @@
+{
+    "traqtionApp": {
+        "serviceProvider" : {
+            "home": {
+                "title": "ServiceProviders",
+                "createLabel": "Créer un nouveau ServiceProvider",
+                "createOrEditLabel": "Créer ou éditer un ServiceProvider"
+            },
+            "created": "Un nouveau ServiceProvider a été créé avec l'identifiant {{ param }}",
+            "updated": "Le ServiceProvider avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le ServiceProvider avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le ServiceProvider {{ id }} ?"
+            },
+            "detail": {
+                "title": "ServiceProvider"
+            },
+            "business": "Business"
+        }
+    }
+}
+

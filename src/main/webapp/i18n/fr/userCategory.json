@@ -1,0 +1,23 @@
+{
+    "traqtionApp": {
+        "userCategory" : {
+            "home": {
+                "title": "UserCategorys",
+                "createLabel": "Créer un nouveau UserCategory",
+                "createOrEditLabel": "Créer ou éditer un UserCategory"
+            },
+            "created": "Un nouveau UserCategory a été créé avec l'identifiant {{ param }}",
+            "updated": "Le UserCategory avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le UserCategory avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le UserCategory {{ id }} ?"
+            },
+            "detail": {
+                "title": "UserCategory"
+            },
+            "category": "Category",
+            "userBusinessRole": "UserBusinessRole"
+        }
+    }
+}
+

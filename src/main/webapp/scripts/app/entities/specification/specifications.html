@@ -1,0 +1,73 @@
+<div>
+    <h2 translate="traqtionApp.specification.home.title">Specifications</h2>
+    <jh-alert></jh-alert>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" ui-sref="specification.new">
+                    <span class="glyphicon glyphicon-flash"></span> <span translate="traqtionApp.specification.home.createLabel">Create a new Specification</span>
+                </button>
+            </div>
+            <div class="col-md-8">
+                <form name="searchForm" class="form-inline">
+                    <div class="form-group">
+                        <input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="query">
+                    </div>
+                    <button class="btn btn-info" ng-click="search()"><span class="glyphicon glyphicon-search"></span> <span>Search a Specification</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="traqtionApp.specification.attribute">Attribute</span></th>
+                    <th><span translate="traqtionApp.specification.attribute1">Attribute1</span></th>
+                    <th><span translate="traqtionApp.specification.version">Version</span></th>
+                    <th><span translate="traqtionApp.specification.primarySpec">primarySpec</span></th>
+                    <th><span translate="traqtionApp.specification.specStatus">specStatus</span></th>
+                    <th><span translate="traqtionApp.specification.document">document</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="specification in specifications track by specification.id">
+                    <td><a ui-sref="specification.detail({id:specification.id})">{{specification.id}}</a></td>
+                    <td>{{specification.attribute}}</td>
+                    <td>{{specification.attribute1}}</td>
+                    <td>{{specification.version}}</td>
+                    <td>
+                        <a ui-sref="primarySpec.detail({id:specification.primarySpec.id})">{{specification.primarySpec.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="specStatus.detail({id:specification.specStatus.id})">{{specification.specStatus.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="specDocument.detail({id:specification.document.id})">{{specification.document.id}}</a>
+                    </td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="specification.detail({id:specification.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="specification.edit({id:specification.id})"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="specification.delete({id:specification.id})"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

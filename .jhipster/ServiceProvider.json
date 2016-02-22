@@ -1,0 +1,17 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "business",
+      "otherEntityName": "business",
+      "relationshipType": "one-to-one",
+      "otherEntityField": "id",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "serviceProvider"
+    }
+  ],
+  "fields": [],
+  "changelogDate": "20160222181430",
+  "dto": "no",
+  "pagination": "no"
+}

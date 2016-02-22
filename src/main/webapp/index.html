@@ -18,8 +18,6 @@
         <!-- endbuild -->
         <link rel="stylesheet" href="bower_components/kendo-ui/styles/kendo.common.min.css" />
     	<link rel="stylesheet" href="bower_components/kendo-ui/styles/kendo.default.min.css" />
-        <script src="bower_components/kendo-ui/js/jquery.min.js"></script>
-        <script src="bower_components/kendo-ui/js/kendo.all.min.js"></script>
     </head>
     <body ng-app="traqtionApp">
         <!--[if lt IE 9]>
@@ -47,6 +45,7 @@
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
         <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/angular-aria/angular-aria.js"></script>
         <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
@@ -65,10 +64,12 @@
         <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
         <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
         <script src="bower_components/json3/lib/json3.js"></script>
+        <script src="bower_components/kendo-ui/js/kendo.ui.core.min.js"></script>
         <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
         <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
+        <script src="bower_components/kendo-ui/js/kendo.all.min.js"></script>
 
 
     <!-- build:js({.tmp,src/main/webapp}) scripts/app.js -->
@@ -151,6 +152,167 @@
     <script src="scripts/components/language/language.service.js"></script>
     <script src="scripts/components/language/language.controller.js"></script>
     <script src="scripts/components/auth/provider/auth.oauth2.service.js"></script>
+    <script src="scripts/app/entities/productStatus/productStatus.js"></script>
+    <script src="scripts/app/entities/productStatus/productStatus.controller.js"></script>
+    <script src="scripts/app/entities/productStatus/productStatus-dialog.controller.js"></script>
+    <script src="scripts/app/entities/productStatus/productStatus-delete-dialog.controller.js"></script>
+    <script src="scripts/app/entities/productStatus/productStatus-detail.controller.js"></script>
+    <script src="scripts/components/entities/productStatus/productStatus.service.js"></script>
+    <script src="scripts/components/entities/productStatus/productStatus.search.service.js"></script>
+    <script src="scripts/app/entities/primarySpec/primarySpec.js"></script>
+    <script src="scripts/app/entities/primarySpec/primarySpec.controller.js"></script>
+    <script src="scripts/app/entities/primarySpec/primarySpec-dialog.controller.js"></script>
+    <script src="scripts/app/entities/primarySpec/primarySpec-delete-dialog.controller.js"></script>
+    <script src="scripts/app/entities/primarySpec/primarySpec-detail.controller.js"></script>
+    <script src="scripts/components/entities/primarySpec/primarySpec.service.js"></script>
+    <script src="scripts/components/entities/primarySpec/primarySpec.search.service.js"></script>
+    <script src="scripts/app/entities/productType/productType.js"></script>
+    <script src="scripts/app/entities/productType/productType.controller.js"></script>
+    <script src="scripts/app/entities/productType/productType-dialog.controller.js"></script>
+    <script src="scripts/app/entities/productType/productType-delete-dialog.controller.js"></script>
+    <script src="scripts/app/entities/productType/productType-detail.controller.js"></script>
+    <script src="scripts/components/entities/productType/productType.service.js"></script>
+    <script src="scripts/components/entities/productType/productType.search.service.js"></script>
+    <script src="scripts/app/entities/brand/brand.js"></script>
+    <script src="scripts/app/entities/brand/brand.controller.js"></script>
+    <script src="scripts/app/entities/brand/brand-dialog.controller.js"></script>
+    <script src="scripts/app/entities/brand/brand-delete-dialog.controller.js"></script>
+    <script src="scripts/app/entities/brand/brand-detail.controller.js"></script>
+    <script src="scripts/components/entities/brand/brand.service.js"></script>
+    <script src="scripts/components/entities/brand/brand.search.service.js"></script>
+    <script src="scripts/app/entities/specStatus/specStatus.js"></script>
+    <script src="scripts/app/entities/specStatus/specStatus.controller.js"></script>
+    <script src="scripts/app/entities/specStatus/specStatus-dialog.controller.js"></script>
+    <script src="scripts/app/entities/specStatus/specStatus-delete-dialog.controller.js"></script>
+    <script src="scripts/app/entities/specStatus/specStatus-detail.controller.js"></script>
+    <script src="scripts/components/entities/specStatus/specStatus.service.js"></script>
+    <script src="scripts/components/entities/specStatus/specStatus.search.service.js"></script>
+    <script src="scripts/app/entities/business/business.js"></script>
+    <script src="scripts/app/entities/business/business.controller.js"></script>
+    <script src="scripts/app/entities/business/business-dialog.controller.js"></script>
+    <script src="scripts/app/entities/business/business-delete-dialog.controller.js"></script>
+    <script src="scripts/app/entities/business/business-detail.controller.js"></script>
+    <script src="scripts/components/entities/business/business.service.js"></script>
+    <script src="scripts/components/entities/business/business.search.service.js"></script>
+    <script src="scripts/app/entities/specDocument/specDocument.js"></script>
+    <script src="scripts/app/entities/specDocument/specDocument.controller.js"></script>
+    <script src="scripts/app/entities/specDocument/specDocument-dialog.controller.js"></script>
+    <script src="scripts/app/entities/specDocument/specDocument-delete-dialog.controller.js"></script>
+    <script src="scripts/app/entities/specDocument/specDocument-detail.controller.js"></script>
+    <script src="scripts/components/entities/specDocument/specDocument.service.js"></script>
+    <script src="scripts/components/entities/specDocument/specDocument.search.service.js"></script>
+    <script src="scripts/app/entities/businessRelationshipType/businessRelationshipType.js"></script>
+    <script src="scripts/app/entities/businessRelationshipType/businessRelationshipType.controller.js"></script>
+    <script src="scripts/app/entities/businessRelationshipType/businessRelationshipType-dialog.controller.js"></script>
+    <script src="scripts/app/entities/businessRelationshipType/businessRelationshipType-delete-dialog.controller.js"></script>
+    <script src="scripts/app/entities/businessRelationshipType/businessRelationshipType-detail.controller.js"></script>
+    <script src="scripts/components/entities/businessRelationshipType/businessRelationshipType.service.js"></script>
+    <script src="scripts/components/entities/businessRelationshipType/businessRelationshipType.search.service.js"></script>
+    <script src="scripts/app/entities/rolePermission/rolePermission.js"></script>
+    <script src="scripts/app/entities/rolePermission/rolePermission.controller.js"></script>
+    <script src="scripts/app/entities/rolePermission/rolePermission-dialog.controller.js"></script>
+    <script src="scripts/app/entities/rolePermission/rolePermission-delete-dialog.controller.js"></script>
+    <script src="scripts/app/entities/rolePermission/rolePermission-detail.controller.js"></script>
+    <script src="scripts/components/entities/rolePermission/rolePermission.service.js"></script>
+    <script src="scripts/components/entities/rolePermission/rolePermission.search.service.js"></script>
+    <script src="scripts/app/entities/businessType/businessType.js"></script>
+    <script src="scripts/app/entities/businessType/businessType.controller.js"></script>
+    <script src="scripts/app/entities/businessType/businessType-dialog.controller.js"></script>
+    <script src="scripts/app/entities/businessType/businessType-delete-dialog.controller.js"></script>
+    <script src="scripts/app/entities/businessType/businessType-detail.controller.js"></script>
+    <script src="scripts/components/entities/businessType/businessType.service.js"></script>
+    <script src="scripts/components/entities/businessType/businessType.search.service.js"></script>
+    <script src="scripts/app/entities/product/product.js"></script>
+    <script src="scripts/app/entities/product/product.controller.js"></script>
+    <script src="scripts/app/entities/product/product-dialog.controller.js"></script>
+    <script src="scripts/app/entities/product/product-delete-dialog.controller.js"></script>
+    <script src="scripts/app/entities/product/product-detail.controller.js"></script>
+    <script src="scripts/components/entities/product/product.service.js"></script>
+    <script src="scripts/components/entities/product/product.search.service.js"></script>
+    <script src="scripts/app/entities/specification/specification.js"></script>
+    <script src="scripts/app/entities/specification/specification.controller.js"></script>
+    <script src="scripts/app/entities/specification/specification-dialog.controller.js"></script>
+    <script src="scripts/app/entities/specification/specification-delete-dialog.controller.js"></script>
+    <script src="scripts/app/entities/specification/specification-detail.controller.js"></script>
+    <script src="scripts/components/entities/specification/specification.service.js"></script>
+    <script src="scripts/components/entities/specification/specification.search.service.js"></script>
+    <script src="scripts/app/entities/supplierSite/supplierSite.js"></script>
+    <script src="scripts/app/entities/supplierSite/supplierSite.controller.js"></script>
+    <script src="scripts/app/entities/supplierSite/supplierSite-dialog.controller.js"></script>
+    <script src="scripts/app/entities/supplierSite/supplierSite-delete-dialog.controller.js"></script>
+    <script src="scripts/app/entities/supplierSite/supplierSite-detail.controller.js"></script>
+    <script src="scripts/components/entities/supplierSite/supplierSite.service.js"></script>
+    <script src="scripts/components/entities/supplierSite/supplierSite.search.service.js"></script>
+    <script src="scripts/app/entities/client/client.js"></script>
+    <script src="scripts/app/entities/client/client.controller.js"></script>
+    <script src="scripts/app/entities/client/client-dialog.controller.js"></script>
+    <script src="scripts/app/entities/client/client-delete-dialog.controller.js"></script>
+    <script src="scripts/app/entities/client/client-detail.controller.js"></script>
+    <script src="scripts/components/entities/client/client.service.js"></script>
+    <script src="scripts/components/entities/client/client.search.service.js"></script>
+    <script src="scripts/app/entities/supplier/supplier.js"></script>
+    <script src="scripts/app/entities/supplier/supplier.controller.js"></script>
+    <script src="scripts/app/entities/supplier/supplier-dialog.controller.js"></script>
+    <script src="scripts/app/entities/supplier/supplier-delete-dialog.controller.js"></script>
+    <script src="scripts/app/entities/supplier/supplier-detail.controller.js"></script>
+    <script src="scripts/components/entities/supplier/supplier.service.js"></script>
+    <script src="scripts/components/entities/supplier/supplier.search.service.js"></script>
+    <script src="scripts/app/entities/role/role.js"></script>
+    <script src="scripts/app/entities/role/role.controller.js"></script>
+    <script src="scripts/app/entities/role/role-dialog.controller.js"></script>
+    <script src="scripts/app/entities/role/role-delete-dialog.controller.js"></script>
+    <script src="scripts/app/entities/role/role-detail.controller.js"></script>
+    <script src="scripts/components/entities/role/role.service.js"></script>
+    <script src="scripts/components/entities/role/role.search.service.js"></script>
+    <script src="scripts/app/entities/userBusinessRole/userBusinessRole.js"></script>
+    <script src="scripts/app/entities/userBusinessRole/userBusinessRole.controller.js"></script>
+    <script src="scripts/app/entities/userBusinessRole/userBusinessRole-dialog.controller.js"></script>
+    <script src="scripts/app/entities/userBusinessRole/userBusinessRole-delete-dialog.controller.js"></script>
+    <script src="scripts/app/entities/userBusinessRole/userBusinessRole-detail.controller.js"></script>
+    <script src="scripts/components/entities/userBusinessRole/userBusinessRole.service.js"></script>
+    <script src="scripts/components/entities/userBusinessRole/userBusinessRole.search.service.js"></script>
+    <script src="scripts/app/entities/serviceProvider/serviceProvider.js"></script>
+    <script src="scripts/app/entities/serviceProvider/serviceProvider.controller.js"></script>
+    <script src="scripts/app/entities/serviceProvider/serviceProvider-dialog.controller.js"></script>
+    <script src="scripts/app/entities/serviceProvider/serviceProvider-delete-dialog.controller.js"></script>
+    <script src="scripts/app/entities/serviceProvider/serviceProvider-detail.controller.js"></script>
+    <script src="scripts/components/entities/serviceProvider/serviceProvider.service.js"></script>
+    <script src="scripts/components/entities/serviceProvider/serviceProvider.search.service.js"></script>
+    <script src="scripts/app/entities/manufacturer/manufacturer.js"></script>
+    <script src="scripts/app/entities/manufacturer/manufacturer.controller.js"></script>
+    <script src="scripts/app/entities/manufacturer/manufacturer-dialog.controller.js"></script>
+    <script src="scripts/app/entities/manufacturer/manufacturer-delete-dialog.controller.js"></script>
+    <script src="scripts/app/entities/manufacturer/manufacturer-detail.controller.js"></script>
+    <script src="scripts/components/entities/manufacturer/manufacturer.service.js"></script>
+    <script src="scripts/components/entities/manufacturer/manufacturer.search.service.js"></script>
+    <script src="scripts/app/entities/businessRelationship/businessRelationship.js"></script>
+    <script src="scripts/app/entities/businessRelationship/businessRelationship.controller.js"></script>
+    <script src="scripts/app/entities/businessRelationship/businessRelationship-dialog.controller.js"></script>
+    <script src="scripts/app/entities/businessRelationship/businessRelationship-delete-dialog.controller.js"></script>
+    <script src="scripts/app/entities/businessRelationship/businessRelationship-detail.controller.js"></script>
+    <script src="scripts/components/entities/businessRelationship/businessRelationship.service.js"></script>
+    <script src="scripts/components/entities/businessRelationship/businessRelationship.search.service.js"></script>
+    <script src="scripts/app/entities/category/category.js"></script>
+    <script src="scripts/app/entities/category/category.controller.js"></script>
+    <script src="scripts/app/entities/category/category-dialog.controller.js"></script>
+    <script src="scripts/app/entities/category/category-delete-dialog.controller.js"></script>
+    <script src="scripts/app/entities/category/category-detail.controller.js"></script>
+    <script src="scripts/components/entities/category/category.service.js"></script>
+    <script src="scripts/components/entities/category/category.search.service.js"></script>
+    <script src="scripts/app/entities/userCategory/userCategory.js"></script>
+    <script src="scripts/app/entities/userCategory/userCategory.controller.js"></script>
+    <script src="scripts/app/entities/userCategory/userCategory-dialog.controller.js"></script>
+    <script src="scripts/app/entities/userCategory/userCategory-delete-dialog.controller.js"></script>
+    <script src="scripts/app/entities/userCategory/userCategory-detail.controller.js"></script>
+    <script src="scripts/components/entities/userCategory/userCategory.service.js"></script>
+    <script src="scripts/components/entities/userCategory/userCategory.search.service.js"></script>
+    <script src="scripts/app/entities/permissions/permissions.js"></script>
+    <script src="scripts/app/entities/permissions/permissions.controller.js"></script>
+    <script src="scripts/app/entities/permissions/permissions-dialog.controller.js"></script>
+    <script src="scripts/app/entities/permissions/permissions-delete-dialog.controller.js"></script>
+    <script src="scripts/app/entities/permissions/permissions-detail.controller.js"></script>
+    <script src="scripts/components/entities/permissions/permissions.service.js"></script>
+    <script src="scripts/components/entities/permissions/permissions.search.service.js"></script>
     <!-- endbuild -->
 </body>
 </html>

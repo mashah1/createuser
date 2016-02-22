@@ -1,0 +1,25 @@
+{
+    "traqtionApp": {
+        "business" : {
+            "home": {
+                "title": "Businesss",
+                "createLabel": "Créer un nouveau Business",
+                "createOrEditLabel": "Créer ou éditer un Business"
+            },
+            "created": "Un nouveau Business a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Business avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Business avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Business {{ id }} ?"
+            },
+            "detail": {
+                "title": "Business"
+            },
+            "name": "Name",
+            "displayName": "DisplayName",
+            "address": "Address",
+            "description": "Description"
+        }
+    }
+}
+

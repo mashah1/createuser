@@ -1,0 +1,70 @@
+
+<div>
+    <h2><span translate="traqtionApp.specification.detail.title">Specification</span> {{specification.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="traqtionApp.specification.attribute">Attribute</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{specification.attribute}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="traqtionApp.specification.attribute1">Attribute1</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{specification.attribute1}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="traqtionApp.specification.version">Version</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{specification.version}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="traqtionApp.specification.primarySpec">primarySpec</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="primarySpec.detail({id:specification.primarySpec.id})">{{specification.primarySpec.id}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="traqtionApp.specification.specStatus">specStatus</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="specStatus.detail({id:specification.specStatus.id})">{{specification.specStatus.id}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="traqtionApp.specification.document">document</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="specDocument.detail({id:specification.document.id})">{{specification.document.id}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

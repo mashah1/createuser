@@ -1,0 +1,24 @@
+{
+    "traqtionApp": {
+        "supplierSite" : {
+            "home": {
+                "title": "SupplierSites",
+                "createLabel": "Créer un nouveau SupplierSite",
+                "createOrEditLabel": "Créer ou éditer un SupplierSite"
+            },
+            "created": "Un nouveau SupplierSite a été créé avec l'identifiant {{ param }}",
+            "updated": "Le SupplierSite avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le SupplierSite avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le SupplierSite {{ id }} ?"
+            },
+            "detail": {
+                "title": "SupplierSite"
+            },
+            "attribute": "Attribute",
+            "attribute1": "Attribute1",
+            "specification": "Specification"
+        }
+    }
+}
+

@@ -1,0 +1,63 @@
+<div>
+    <h2 translate="traqtionApp.business.home.title">Businesss</h2>
+    <jh-alert></jh-alert>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" ui-sref="business.new">
+                    <span class="glyphicon glyphicon-flash"></span> <span translate="traqtionApp.business.home.createLabel">Create a new Business</span>
+                </button>
+            </div>
+            <div class="col-md-8">
+                <form name="searchForm" class="form-inline">
+                    <div class="form-group">
+                        <input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="query">
+                    </div>
+                    <button class="btn btn-info" ng-click="search()"><span class="glyphicon glyphicon-search"></span> <span>Search a Business</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="traqtionApp.business.name">Name</span></th>
+                    <th><span translate="traqtionApp.business.displayName">DisplayName</span></th>
+                    <th><span translate="traqtionApp.business.address">Address</span></th>
+                    <th><span translate="traqtionApp.business.description">Description</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="business in businesss track by business.id">
+                    <td><a ui-sref="business.detail({id:business.id})">{{business.id}}</a></td>
+                    <td>{{business.name}}</td>
+                    <td>{{business.displayName}}</td>
+                    <td>{{business.address}}</td>
+                    <td>{{business.description}}</td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="business.detail({id:business.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="business.edit({id:business.id})"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="business.delete({id:business.id})"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

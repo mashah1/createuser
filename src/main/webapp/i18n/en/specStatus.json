@@ -1,0 +1,21 @@
+{
+    "traqtionApp": {
+        "specStatus" : {
+            "home": {
+                "title": "SpecStatuss",
+                "createLabel": "Create a new SpecStatus",
+                "createOrEditLabel": "Create or edit a SpecStatus"
+            },
+            "created": "A new SpecStatus is created with identifier {{ param }}",
+            "updated": "A SpecStatus is updated with identifier {{ param }}",
+            "deleted": "A SpecStatus is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete SpecStatus {{ id }}?"
+            },
+            "detail": {
+                "title": "SpecStatus"
+            },
+            "name": "Name"
+        }
+    }
+}

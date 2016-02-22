@@ -1,0 +1,62 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="mySpecificationLabel" translate="traqtionApp.specification.home.createOrEditLabel">Create or edit a Specification</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="specification.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="traqtionApp.specification.attribute" for="field_attribute">Attribute</label>
+            <input type="text" class="form-control" name="attribute" id="field_attribute"
+                    ng-model="specification.attribute"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="traqtionApp.specification.attribute1" for="field_attribute1">Attribute1</label>
+            <input type="text" class="form-control" name="attribute1" id="field_attribute1"
+                    ng-model="specification.attribute1"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="traqtionApp.specification.version" for="field_version">Version</label>
+            <input type="text" class="form-control" name="version" id="field_version"
+                    ng-model="specification.version"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label translate="traqtionApp.specification.primarySpec" for="field_primarySpec">primarySpec</label>
+            <select class="form-control" id="field_primarySpec" name="primarySpec" ng-model="specification.primarySpec" ng-options="primarySpec as primarySpec.id for primarySpec in primaryspecs track by primarySpec.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="traqtionApp.specification.specStatus" for="field_specStatus">specStatus</label>
+            <select class="form-control" id="field_specStatus" name="specStatus" ng-model="specification.specStatus" ng-options="specStatus as specStatus.id for specStatus in specstatuss | orderBy:'id' track by specStatus.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="traqtionApp.specification.document" for="field_document">document</label>
+            <select class="form-control" id="field_document" name="document" ng-model="specification.document" ng-options="specDocument as specDocument.id for specDocument in documents | orderBy:'id' track by specDocument.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>
